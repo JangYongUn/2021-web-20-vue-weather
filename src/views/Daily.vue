@@ -1,15 +1,14 @@
 <template lang="pug">
-  .daily-wrapper
-    h1 Daily
+	.daily-wrapper
+		h1 DAILY
 </template>
 <script>
 export default {
-  name: 'Daily'
+	name: 'Daily'
 }
 </script>
 <style lang="scss" scoped>
-  @import '@/assets/scss/_mixins';
-  .daily-wrapper {
-    text-align: center;
-  }
+.daily-wrapper {
+	text-align: center;
+}
 </style>
