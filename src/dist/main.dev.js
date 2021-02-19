@@ -8,7 +8,7 @@ var _router = _interopRequireDefault(require("./router"));
 
 var _store = _interopRequireDefault(require("./store"));
 
-require("@fontawesome/fontawesome-free/css/all.min.css");
+require("@fortawesome/fontawesome-free/css/all.min.css");
 
 var _bootstrapVue = require("bootstrap-vue");
 
@@ -20,7 +20,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 _vue["default"].use(_bootstrapVue.BootstrapVue);
 
-_vue["default"].config.productionTip = false;
 _vue["default"].config.productionTip = false;
 new _vue["default"]({
   router: _router["default"],
