@@ -25,14 +25,14 @@ export default {
 		@include flex($FS, $CT);
 		padding: 1em;
 		i {
-			margin-right: 1em
+			margin-right: 1em;
 		}
 	}
 	.navi-wrapper {
 		@include flex($FS, $CT);
-			.navi {
-				padding: 1em;
-			}
+		.navi {
+			padding: 1em;
+		}
 	}
 }
 </style>

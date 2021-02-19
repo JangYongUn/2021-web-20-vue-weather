@@ -1,6 +1,6 @@
 <template lang="pug">
 	footer.footer-wrapper
-
+		Copyright &copy;JangYongUn. Allright Reserved.
 </template>
 <script>
 export default {
