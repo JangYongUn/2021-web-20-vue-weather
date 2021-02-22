@@ -3,21 +3,29 @@
 		b-form-select(v-model="selected" :options="city" size="lg")
 </template>
 <script>
-	import axios from 'axios'
+import axios from 'axios'
+
 export default {
 	name: 'Search',
 	async created() {
 		const r = await axios.get('/json/city.json')
 		this.city = r.data.map((v) => {
-			v.title = v.name
+			v.text = v.name
 			v.value = v.id
-			return v
-		})
+			return v;
+		});
+		this.city.unshift({value: null, text: '도시를 선택하세요.'});
+	},
+	watch: {
+		selected: function(nv, ov) {
+			this.$store.dispatch('ACT_CITY', nv)
+		}
 	},
 	data() {
 		return {
 			selected: null,
-			city: []
+			city: [],
+			app_id: ''
 		}
 	}
 }
