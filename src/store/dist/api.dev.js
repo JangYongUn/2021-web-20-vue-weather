@@ -15,7 +15,7 @@ var DAYS_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 var params = {
   units: 'metric',
   lang: 'kr',
-  appid: APP_ID
+  appid: process.env.VUE_APP_ID
 }; // 현재 위치의 navigator.getPosition()
 
 var getPosition = function getPosition() {

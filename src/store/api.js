@@ -3,7 +3,7 @@ import axios from 'axios'
 const APP_ID = '7e9fe622cfa1cb7e7399447de68c392f';
 const DAILY_URL = 'https://api.openweathermap.org/data/2.5/weather'
 const DAYS_URL = 'https://api.openweathermap.org/data/2.5/forecast'
-const params = { units: 'metric', lang: 'kr', appid: APP_ID }
+const params = { units: 'metric', lang: 'kr', appid: process.env.VUE_APP_ID }
 
 // 현재 위치의 navigator.getPosition()
 const getPosition = async () => {

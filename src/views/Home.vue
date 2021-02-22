@@ -1,33 +1,22 @@
 <template lang="pug">
 	.home-wrapper
 		.title-wrapper
-			h1 Vue를 활용한 날씨정보 앱
+			h2 Vue를 활용한 날씨정보 앱
 				small.ml-3 v1.0
+			h1 {{ GET_DAILY.name }}
 		Search
-		input(type="text" v-model="query")
-		div {{myName}}
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import Search from '../components/Search.vue'
 
 export default {
 	name: 'Home',
 	components: { Search },
-	computed: {
-		// 내 값이 바뀌어야 될때.
-		myName: function() {
-			return this.query;
-		}
-	},
-	watch: {
-		// 내 값이 바뀌어서 뭔가를 실행할때.
-		myName: function(nVal, oVal) {
-			console.log(nVal, oVal);
-		}
-	},
+	computed: { ...mapGetters(['GET_DAILY', 'GET_CITY']) },
 	data() {
 		return {
-			query: ''
+		
 		}
 	},
 	methods: {
