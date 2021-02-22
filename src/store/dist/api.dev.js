@@ -9,7 +9,7 @@ var _axios = _interopRequireDefault(require("axios"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var APP_ID = '02efdd64bdc14b279bc91d9247db4722';
+var APP_ID = '7e9fe622cfa1cb7e7399447de68c392f';
 var DAILY_URL = 'https://api.openweathermap.org/data/2.5/weather';
 var DAYS_URL = 'https://api.openweathermap.org/data/2.5/forecast';
 var params = {
