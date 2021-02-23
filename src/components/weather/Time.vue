@@ -1,9 +1,10 @@
 <template lang="pug">
-	.daily-wrapper time
+	.wrapper {{value}}
 </template>
 <script>
 export default {
-	name= 'Daily'
+	name: 'Time',
+	props: ['value']
 }
 </script>
 <style lang="scss" scoped>

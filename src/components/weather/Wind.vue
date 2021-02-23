@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-	name= 'Daily'
+	name= 'Wind',
 }
 </script>
 <style lang="scss" scoped>
