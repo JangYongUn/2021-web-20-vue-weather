@@ -4,16 +4,17 @@
 			h2 Vue를 활용한 날씨정보 앱
 				small.ml-3 v1.0
 			h1 {{ GET_DAILY.name }}
-			h1 lat: {{ GET_GEO.lat }} / lon: {{ GET_GEO.lon }}
 		Search
+		Daily(:value="GET_DAILY")
 </template>
 <script>
 import { mapGetters } from 'vuex'
 import Search from '../components/Search.vue'
+import Daily from '../components/weather/Daily.vue'
 
 export default {
 	name: 'Home',
-	components: { Search },
+	components: { Search, Daily },
 	computed: { ...mapGetters(['GET_DAILY', 'GET_GEO']) },
 	created() {
 		this.$store.dispatch('ACT_POSITION')
