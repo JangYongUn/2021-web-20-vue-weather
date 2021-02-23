@@ -13,7 +13,7 @@ export default {
 	components: { Header, Footer }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 #app {
 	@include flex($SB, $ST);
 	flex-direction: column;

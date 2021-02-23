@@ -1,6 +1,6 @@
 <template lang="pug">
 	.wrapper-daily
-		Title.Title(:name="value.name" :country="value.sys.country")
+		Title.Title(:name="value.name" :country="value ? value.sys.country : ''")
 		Time
 		Icon
 		Temp
