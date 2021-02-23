@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-	name= 'Temp',
+	name: 'Temp',
 }
 </script>
 <style lang="scss" scoped>
