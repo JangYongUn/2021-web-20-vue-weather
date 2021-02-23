@@ -1,9 +1,9 @@
 <template lang="pug">
-	.daily-wrapper desc
+	.daily-wrapper Summary
 </template>
 <script>
 export default {
-	name= 'Daily'
+	name= 'Summary',
 }
 </script>
 <style lang="scss" scoped>
