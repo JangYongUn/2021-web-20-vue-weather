@@ -6,7 +6,7 @@
 <script>
 export default {
 	name: 'DayList',
-	
+	props: ['value'],
 }
 </script>
 <style lang="scss" scoped>

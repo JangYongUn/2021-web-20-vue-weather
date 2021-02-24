@@ -1,7 +1,8 @@
 <template lang="pug">
 	.days-wrapper
-		Title 5DAYS
-		DayList
+		.title-wrapper
+			Title.title
+			DayList
 </template>
 <script>
 
@@ -15,7 +16,7 @@ export default {
 	computed: {
 		...mapGetters(['GET_DAYS']),
 	}
-},
+}
 created() {
 	let selected
 }

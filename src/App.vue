@@ -1,7 +1,8 @@
 <template lang="pug">
 	#app.container
 		Header
-		router-view.wrapper-view
+		transition(name="fade" mode="out-in")
+			router-view.wrapper-view
 		Footer
 </template>
 <script>
@@ -24,6 +25,19 @@ export default {
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
 		overflow-y: auto;
+	}
+	.fade-enter {
+		opacity: 0;
+	}
+	.fade-enter-active {
+		transition: opacity 0.5s ease;
+	}
+	.fade-leave {
+
+	}
+	.fade-leave-active {
+		transition: opacity 0.5s ease;
+		opacity: 0;
 	}
 }
 </style>
