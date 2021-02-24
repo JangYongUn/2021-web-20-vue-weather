@@ -1,14 +1,23 @@
 <template lang="pug">
 	.days-wrapper
-		h1 5DAYS
+		Title 5DAYS
 		DayList
 </template>
 <script>
 
 import DayList from '../components/weather/DayList.vue'
+import Title from '../components/weather/Title.vue'
+import { mapGetters } from 'vuex'
 
 export default {
-	name: 'Days'
+	name: 'Days',
+	components: { DayList, Title },
+	computed: {
+		...mapGetters(['GET_DAYS']),
+	}
+},
+created() {
+	let selected
 }
 </script>
 <style lang="scss" scoped>

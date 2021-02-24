@@ -18,12 +18,12 @@ export default {
 	@include flex($SB, $ST);
 	flex-direction: column;
 	height: 100vh;
+	padding: 0;
 	.wrapper-view {
 		border-left: 1px solid $colorLight;
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
 		overflow-y: auto;
-		padding: 2em;
 	}
 }
 </style>
