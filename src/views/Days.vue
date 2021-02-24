@@ -1,8 +1,12 @@
 <template lang="pug">
 	.days-wrapper
 		h1 5DAYS
+		DayList
 </template>
 <script>
+
+import DayList from '../components/weather/DayList.vue'
+
 export default {
 	name: 'Days'
 }

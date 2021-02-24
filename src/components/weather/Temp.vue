@@ -1,18 +1,17 @@
 <template lang="pug">
 	.wrapper
-		.temp 
-			spen.title 현재온도
-			span.cont {{value.temp}}
-			span ℃ (
-			span.title 체감온도 
-			span.cont {{value.feel}}
-			span ℃ )
-		.temp2
-			spen.title 최고온도
-			span.temp {{value.max}} 
-			span ℃ /  
-			span.title 최저온도 
-			span.temp {{value.min}} 
+		.temp-wrap
+			span.temp {{value.temp}} 
+			span ℃ ( 
+			span.title 체감
+			span.temp {{value.feel}} 
+			span ℃) 
+		.temp-wrap
+			span.title 최고
+			span.temp {{value.max}}
+			span ℃ / 
+			span.title 최저
+			span.temp {{value.min}}
 			span ℃
 </template>
 <script>
@@ -22,5 +21,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-	
+	.temp-wrap {
+		.title {
+			font-size: 1em;
+			margin-right: 0.5em;
+			color: $colorDark;
+		}
+		.temp {
+			font-size: 1.25em;
+			font-weight: bold;
+			color: inherit;
+		}
+	}
 </style>
