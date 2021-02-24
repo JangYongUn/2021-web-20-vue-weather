@@ -25,6 +25,10 @@ export default {
 		border-right: 1px solid $colorLight;
 		flex-grow: 1;
 		overflow-y: auto;
+		@include mobile {
+			border-left: none;
+			border-right: none;
+		}
 	}
 	.fade-enter {
 		opacity: 0;
