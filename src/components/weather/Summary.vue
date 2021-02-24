@@ -1,9 +1,12 @@
 <template lang="pug">
-	.daily-wrapper Summary
+	.wrapper 
+		span {{value.desc}}
+		span ({{value.main}})
 </template>
 <script>
 export default {
 	name: 'Summary',
+	props: ['value']
 }
 </script>
 <style lang="scss" scoped>
