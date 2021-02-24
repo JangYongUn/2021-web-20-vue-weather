@@ -15,7 +15,7 @@ export default {
 	name: 'Home',
 	components: { Search, Daily },
 	created() {
-		this.$store.dispatch('ACT_WEATHER', null)
+		this.$store.dispatch('ACT_DAILY', null)
 	},
 	data() {
 		return {
