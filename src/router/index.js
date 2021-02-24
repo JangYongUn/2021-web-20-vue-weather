@@ -13,11 +13,6 @@ const routes = [
 		component: Home
 	},
 	{
-		path: '/daily',
-		name: 'Daily',
-		component: Daily
-	},
-	{
 		path: '/5days',
 		name: 'Days',
 		component: Days
