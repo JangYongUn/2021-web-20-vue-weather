@@ -90,11 +90,8 @@ export default {
 		.Wind {
 			font-size: 0.875em;
 		}
-		@include desctop {
+		@include desktop {
 			width: 48%;
-		}
-		@include laptop {
-			width: 98%;
 		}
 		@include tablet {
 			width: 98%;
