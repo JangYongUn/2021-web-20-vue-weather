@@ -3,10 +3,10 @@
 		.icon
 			Icon.Icon(:value="icon")
 		.cont
-			Time.Time(:value="time")
 			Temp.Temp(:value="temp")
 			Summary.Summary(:value="summary")
 			Wind.Wind(:value="wind")
+			Time.Time(:value="time")
 </template>
 <script>
 
@@ -79,7 +79,7 @@ export default {
 		border: 1px solid $colorLighter;
 		@include flex($FS, $FS);
 		width: 31.3333%;
-			font-size: 0.875em;
+		font-size: 0.875em;
 		.Temp {
 			font-size: 1em;
 			color: #1a2b4d;
