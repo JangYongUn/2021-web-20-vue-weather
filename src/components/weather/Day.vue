@@ -1,10 +1,12 @@
 <template lang="pug">
 	.day
-		Time.Time(:value="time")
-		Icon.Icon(:value="icon")
-		Temp.Temp(:value="temp")
-		Summary.Summary(:value="summary")
-		Wind.Wind(:value="wind")
+		.icon
+			Icon.Icon(:value="icon")
+		.cont
+			Time.Time(:value="time")
+			Temp.Temp(:value="temp")
+			Summary.Summary(:value="summary")
+			Wind.Wind(:value="wind")
 </template>
 <script>
 
@@ -72,15 +74,36 @@ export default {
 </script>
 <style lang="scss" scoped>
 	.day {
-		width: 33.3333%;
+		padding: 2%;
+		margin: 1%;
+		border: 1px solid $colorLighter;
+		@include flex($FS, $FS);
+		width: 31.3333%;
+			font-size: 0.875em;
+		.Temp {
+			font-size: 1em;
+			color: #1a2b4d;
+		}
+		.Summary {
+			font-size: 1.25em;
+		}
+		.Wind {
+			font-size: 0.875em;
+		}
+		@include desctop {
+			width: 48%;
+		}
 		@include laptop {
-			width: 50%;
+			width: 98%;
 		}
 		@include tablet {
-			width: 100%;
+			width: 98%;
 		}
-		@include mobile {
-			width: 25%;
+		.icon {
+			margin-right: 1em;
+			@include mobile {
+				margin-right: 1.5em;
+			}
 		}
 	}
 </style>

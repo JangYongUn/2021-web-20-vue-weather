@@ -1,8 +1,9 @@
 <template lang="pug">
-	.daily-wrapper 
-		i.fa.fa-arrow-down(style="`transform: rotate(${value.deg}deg)`") 
+	.wrapper 
+		i.fa.fa-arrow-down(style="style") 
 		span.direction {{direction}}
 		span.speed {{value.speed}}
+		span ㎧
 </template>
 <script>
 
@@ -24,7 +25,7 @@ export default {
 	props: ['value'],
 	computed: {
 		style: function() {
-
+			return `transform: rotate(${this.value.deg}deg)`
 		},
 		direction: function() {
 			return windGen(this.value.deg) + '풍'
@@ -33,5 +34,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-	
+	.wrapper {
+		i {
+			margin-right: 0.5em;
+		}
+		.direction {
+			font-size: 1.25em;
+			margin-right: 0.5em;
+		}
+		.speed {
+			font-size: 1.125em;
+		}
+	}
 </style>

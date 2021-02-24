@@ -15,7 +15,7 @@ export default {
 <style lang="scss" scoped>
 	.day-list {
 		overflow-y: auto;
-		@include flex($FS, $FS);
+		@include flex($FS, $ST);
 		flex-wrap: wrap;
 	}
 </style>
