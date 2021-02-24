@@ -7,7 +7,7 @@ import axios from 'axios'
 
 export default {
 	name: 'Search',
-	props: ['calue', 'selCity'],
+	props: ['value', 'selCity'],
 	async created() {
 		const r = await axios.get('/json/city.json')
 		this.city = r.data.map((v) => {
