@@ -3,9 +3,9 @@
 		Title.Title(:value="title")
 		Time.Time(:value="time")
 		Icon.Icon(:value="icon")
-		Temp
-		Summary
-		Wind
+		Temp.Temp(:value="temp")
+		Summary.Summary(:value="summary")
+		Wind.Wind(:value="wind")
 </template>
 <script>
 import Title from './Title.vue'
@@ -17,6 +17,10 @@ import Wind from './Wind.vue'
 
 import { mapGetters } from 'vuex'
 import moment from 'moment'
+
+const windGen = (deg) => {
+	
+}
 
 export default {
 	name: 'Daily',
@@ -43,8 +47,41 @@ export default {
 				? `http://openweathermap.org/img/wn/${this.GET_DAILY.weather[0].icon}@2x.png`
 				: 'http://via.placeholder.com/25x25&text=no%20icon'
 			)
-		}
-	},
+		},
+		temp: function() {
+			return (
+				this.GET_DAILY
+				? {
+					temp: this.GET_DAILY.main.temp, 
+					feel: this.GET_DAILY.main.feels_like,
+					max: this.GET_DAILY.main.max,
+					min: this.GET_DAILY.main.min,
+				}
+				: {}
+			)
+		},
+		summary: function() {
+			return (
+				this.GET_DAILY
+				? {
+					desc: this.GET_DAILY.weather[0].summary, 
+					main: this.GET_DAILY.weather[0].main,
+				}
+				: {}
+			)
+		},
+		wind: function() {
+			return (
+				this.GET_DAILY
+				? {
+					direction: windGen( this.GET_DAILY.wind.deg ) + '풍', 
+					deg: this.GET_DAILY.wind.deg, 
+					speed: this.GET_DAILY.wind.speed,
+				}
+				: {}
+			)
+		},
+	}
 }
 </script>
 <style lang="scss" scoped>
