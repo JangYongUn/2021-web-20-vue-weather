@@ -1,42 +1,47 @@
 <template lang="pug">
-	#app.container
-		Header
-		transition(name="fade" mode="out-in")
-			router-view.wrapper-view 
-		Footer
-		Loading(:active.sync="GET_LOADING")
+	.home-wrapper
+		.title-wrapper
+			h2 Vue를 활용한 날씨정보
+				small.ml-3 v1.0
+		Search.Search(:action="`ACT_DAILY`")
+		transition(name="slide-fade" mode="out-in")
+			Daily(:key="tKey" v-if="GET_DAILY")
 </template>
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
 import { mapGetters } from 'vuex'
-import Loading from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/vue-loading.css';
+import Search from '../components/Search.vue'
+import Daily from '../components/weather/Daily.vue'
 
 export default {
-	name: 'App',
-	components: { Header, Footer, Loading },
-	computed: { ...mapGetters(['GET_LOADING']) }
-}
-
-</script>
-<style lang="scss">
-#app {
-	@include flex($SB, $ST);
-	flex-direction: column;
-	padding: 0;
-	height: 100vh;
-
-	.wrapper-view {
-		border-left: 1px solid $colorLight;
-		border-right: 1px solid $colorLight;
-		flex-grow: 1;
-		overflow-y: hidden;
-		@include mobile {
-			border-left: none;
-			border-right: none;
+	name: 'Home',
+	components: { Search, Daily },
+	created() {
+		this.$store.dispatch('ACT_DAILY', null)
+	},
+	data() {
+		return {
+			tKey: '',
+		}
+	},
+	computed: {
+		...mapGetters(['GET_DAILY'])
+	},
+	watch: {
+		GET_DAILY: function(nv){
+			if(nv) this.tKey = nv.name
 		}
 	}
 }
-
+</script>
+<style lang="scss" scoped>
+.home-wrapper {
+	padding: 1em 2em;
+	text-align: center;
+	@include flex($CT, $CT);
+	flex-direction: column;
+	.Search {
+		min-width: 200px;
+		margin: 2em 0;
+	}
+}
 </style>
