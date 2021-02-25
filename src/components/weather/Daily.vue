@@ -86,7 +86,7 @@ export default {
 			font-size: 1.25em;
 			padding: 0 0.25em;
 			border-bottom: 1px solid $colorLight;
-			margin-bottom: auto;
+			margin: auto;
 		}
 		.Time {
 			margin-bottom: 1em;

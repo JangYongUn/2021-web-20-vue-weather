@@ -35,13 +35,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home-wrapper {
-	padding: 1em 2em;
+	height: 100%;
+	padding: 2em;
 	text-align: center;
-	//@include flex($CT, $CT);
-	//flex-direction: column;
+	// @include flex($CT, $CT);
+	// flex-direction: column;
 	.Search {
 		width: 200px;
-		margin: 2em 0;
+		margin: 2em auto;
 	}
 }
 </style>
