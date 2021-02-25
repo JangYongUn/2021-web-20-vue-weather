@@ -25,7 +25,7 @@ export default {
 		title: function() {
 			return (
 				this.GET_DAYS
-				? { name: this.GET_DAYS.city.name, country: this.GET_DAYS.city.country }
+				? { name: this.GET_DAYS.city.name + ',', country: this.GET_DAYS.city.country }
 				: { name: '', country: '' }
 			)
 		},
