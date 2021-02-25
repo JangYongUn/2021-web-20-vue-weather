@@ -15,7 +15,7 @@ var _default = {
     return state.days;
   },
   GET_LOADING: function GET_LOADING(state) {
-    return state.loading;
+    return state.isLoading;
   }
 };
 exports["default"] = _default;

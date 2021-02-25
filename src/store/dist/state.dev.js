@@ -8,6 +8,6 @@ var _default = {
   selectedCity: '',
   daily: null,
   days: null,
-  isLoading: ''
+  isLoading: false
 };
 exports["default"] = _default;

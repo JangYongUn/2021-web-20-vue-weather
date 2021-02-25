@@ -8,7 +8,7 @@ export default {
 	MUT_DAYS(state, r) {
 		state.days = r;
 	},
-	GET_LOADING(state, r) {
-		state.loading = r;
+	MUT_LOADING(state, r) {
+		state.isLoading = r;
 	}
 }

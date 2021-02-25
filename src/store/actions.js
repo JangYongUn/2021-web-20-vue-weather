@@ -11,5 +11,5 @@ export default {
 		commit('MUT_LOADING', true);
 		commit('MUT_DAYS', await getWeather(value, 'days'))
 		commit('MUT_LOADING', false);
-	}
+	},
 }

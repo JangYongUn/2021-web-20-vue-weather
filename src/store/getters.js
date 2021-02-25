@@ -9,6 +9,6 @@ export default {
 		return state.days
 	},
 	GET_LOADING(state) {
-		return state.loading
+		return state.isLoading
 	}
 }

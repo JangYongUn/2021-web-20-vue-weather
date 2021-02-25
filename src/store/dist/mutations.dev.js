@@ -14,8 +14,8 @@ var _default = {
   MUT_DAYS: function MUT_DAYS(state, r) {
     state.days = r;
   },
-  GET_LOADING: function GET_LOADING(state, r) {
-    state.loading = r;
+  MUT_LOADING: function MUT_LOADING(state, r) {
+    state.isLoading = r;
   }
 };
 exports["default"] = _default;
