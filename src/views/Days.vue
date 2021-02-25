@@ -3,7 +3,8 @@
 		.title-wrapper
 			Title.title(:value="title")
 			Search.search(:value="value" :selCity="GET_CITY")
-		DayList.day-list(:value="GET_DAYS")
+		transition(name="fade" mode="out-in")
+			DayList.day-list(:value="GET_DAYS" :key="tKey")
 </template>
 <script>
 
@@ -17,7 +18,8 @@ export default {
 	components: { Search, DayList, Title },
 	data() {
 		return {
-			value: 'ACT_DAYS'
+			value: 'ACT_DAYS',
+			tKey: '',
 		}
 	},
 	computed: {
@@ -28,6 +30,11 @@ export default {
 				? { name: this.GET_DAYS.city.name, country: this.GET_DAYS.city.country }
 				: { name: '', country: ''}
 			)
+		}
+	},
+	watch: {
+		GET_DAYS: function(nv) {
+			if(nv) this.tKey = nv.city.name
 		}
 	}
 }

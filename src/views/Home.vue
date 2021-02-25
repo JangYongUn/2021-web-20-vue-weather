@@ -22,8 +22,13 @@ export default {
 			value: 'ACT_DAILY'
 		}
 	},
-	methods: {
-		
+	computed: {
+		...mapGetters(['GET_DAILY'])
+	},
+	watch: {
+		GET_DAILY: function(nv) {
+			if(nv) this.
+		}
 	}
 }
 </script>
