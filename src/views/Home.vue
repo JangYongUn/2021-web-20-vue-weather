@@ -1,10 +1,11 @@
 <template lang="pug">
 	.home-wrapper
 		.title-wrapper
-			h2 Vue를 활용한 날씨정보 앱
+			h2 Vue를 활용한 날씨정보
 				small.ml-3 v1.0
-		Search.Search(:action="ACT_DAILY")
-		Daily
+		Search.Search(:action="`ACT_DAILY`")
+		transition(name="slide-fade" mode="out-in")
+			Daily(:key="tKey")
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -17,12 +18,17 @@ export default {
 	created() {
 		this.$store.dispatch('ACT_DAILY', null)
 	},
+	data() {
+		return {
+			tKey: '',
+		}
+	},
 	computed: {
 		...mapGetters(['GET_DAILY'])
 	},
 	watch: {
-		GET_DAILY: function(nv) {
-			if(nv) this.tKey = nv.city.name
+		GET_DAILY: function(nv){
+			if(nv) this.tKey = nv.name
 		}
 	}
 }

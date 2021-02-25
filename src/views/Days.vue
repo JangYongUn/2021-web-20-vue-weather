@@ -3,19 +3,18 @@
 		.title-wrapper
 			Title.title(:value="title")
 			Search.search(:action="`ACT_DAYS`" :selCity="GET_CITY")
-		transition(name="fade" mode="out-in")
+		transition(name="slide-fade" mode="out-in")
 			DayList.day-list(:value="GET_DAYS" :key="tKey")
 </template>
 <script>
-
+import { mapGetters } from 'vuex'
 import Search from '../components/Search.vue'
 import DayList from '../components/weather/DayList.vue'
 import Title from '../components/weather/Title.vue'
-import { mapGetters } from 'vuex'
 
 export default {
 	name: 'Days',
-	components: { Search, DayList, Title },
+	components: { DayList, Title, Search },
 	data() {
 		return {
 			tKey: '',
@@ -27,17 +26,16 @@ export default {
 			return (
 				this.GET_DAYS
 				? { name: this.GET_DAYS.city.name, country: this.GET_DAYS.city.country }
-				: { name: '', country: ''}
+				: { name: '', country: '' }
 			)
-		}
+		},
 	},
 	watch: {
-		GET_DAYS: function(nv) {
+		GET_DAYS: function(nv){
 			if(nv) this.tKey = nv.city.name
 		}
 	}
 }
-
 </script>
 <style lang="scss" scoped>
 .days-wrapper {
