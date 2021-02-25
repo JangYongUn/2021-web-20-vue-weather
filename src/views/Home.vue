@@ -2,7 +2,7 @@
 	.home-wrapper
 		.title-wrapper
 			h2 Vue를 활용한 날씨정보
-				small.ml-3 v1.0
+				//- small.ml-3 v1.0
 		Search.Search(:action="`ACT_DAILY`")
 		transition(name="slide-fade" mode="out-in")
 			Daily(:key="tKey" v-if="GET_DAILY")
@@ -37,10 +37,10 @@ export default {
 .home-wrapper {
 	padding: 1em 2em;
 	text-align: center;
-	@include flex($CT, $CT);
-	flex-direction: column;
+	//@include flex($CT, $CT);
+	//flex-direction: column;
 	.Search {
-		min-width: 200px;
+		width: 200px;
 		margin: 2em 0;
 	}
 }
