@@ -2,7 +2,7 @@
 	.days-wrapper
 		.title-wrapper
 			Title.title(:value="title")
-			Search.search(:value="value" :selCity="GET_CITY")
+			Search.search(:action="`ACT_DAYS`" :selCity="GET_CITY")
 		transition(name="fade" mode="out-in")
 			DayList.day-list(:value="GET_DAYS" :key="tKey")
 </template>
@@ -18,7 +18,6 @@ export default {
 	components: { Search, DayList, Title },
 	data() {
 		return {
-			value: 'ACT_DAYS',
 			tKey: '',
 		}
 	},

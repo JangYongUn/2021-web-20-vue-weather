@@ -3,7 +3,7 @@
 		.title-wrapper
 			h2 Vue를 활용한 날씨정보 앱
 				small.ml-3 v1.0
-		Search.Search(:value="value")
+		Search.Search(:action="ACT_DAILY")
 		Daily
 </template>
 <script>
@@ -17,17 +17,12 @@ export default {
 	created() {
 		this.$store.dispatch('ACT_DAILY', null)
 	},
-	data() {
-		return {
-			value: 'ACT_DAILY'
-		}
-	},
 	computed: {
 		...mapGetters(['GET_DAILY'])
 	},
 	watch: {
 		GET_DAILY: function(nv) {
-			if(nv) this.
+			if(nv) this.tKey = nv.city.name
 		}
 	}
 }

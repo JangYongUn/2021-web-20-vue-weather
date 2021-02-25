@@ -14,7 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 	.day-list {
-		overflow-y: auto;
+		overflow-y: scroll;
 		@include flex($FS, $ST);
 		flex-wrap: wrap;
 	}
