@@ -9,7 +9,6 @@
 			Time.Time(:value="time")
 </template>
 <script>
-
 import Time from './Time.vue'
 import Temp from './Temp.vue'
 import Icon from './Icon.vue'
@@ -82,7 +81,6 @@ export default {
 		font-size: 0.875em;
 		.Temp {
 			font-size: 1em;
-			color: #1a2b4d;
 		}
 		.Summary {
 			font-size: 1.25em;
@@ -96,6 +94,7 @@ export default {
 		@include tablet {
 			width: 98%;
 		}
+
 		.icon {
 			margin-right: 1em;
 			@include mobile {

@@ -18,7 +18,6 @@ import Wind from './Wind.vue'
 import { mapGetters } from 'vuex'
 import moment from 'moment'
 
-
 export default {
 	name: 'Daily',
 	components: { Title, Time, Temp, Icon, Summary, Wind },

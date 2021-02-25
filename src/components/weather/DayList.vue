@@ -3,7 +3,6 @@
 		Day(v-for="v, i in value ? value.list : null" :key="i" :value="v")
 </template>
 <script>
-
 import Day from './Day.vue'
 
 export default {
