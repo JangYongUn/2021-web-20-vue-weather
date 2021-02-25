@@ -14,8 +14,8 @@ export default {
 			v.text = v.name
 			v.value = v.id
 			return v
-		})
-		this.city.unshift({value: null, text: '현재위치'});
+		});
+		this.city.unshift({value: null, text: '현재위치'})
 		this.selected = this.selCity || null
 	},
 	watch: {

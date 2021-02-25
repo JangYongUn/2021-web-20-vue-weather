@@ -2,7 +2,7 @@
 	header.header-wrapper
 		.logo
 			i.fa.fa-sun
-			router-link(to='/') HOME
+			router-link(to='/') DAILY
 		ul.navi-wrapper
 			li.navi
 				router-link(to='/5days') 5DAYS
